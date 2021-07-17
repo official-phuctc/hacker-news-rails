@@ -42,3 +42,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "rack-cors", "~> 1.1"
 
 gem "graphlient", "~> 0.5.0"
+
+gem "dotenv-rails", "~> 2.7"
