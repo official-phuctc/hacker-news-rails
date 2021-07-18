@@ -13,7 +13,7 @@ module ArticlesHelper
     )
   end
 
-  def self.all_articles
+  def all_articles
     client.query <<~GRAPHQL
       query {
         articles {
