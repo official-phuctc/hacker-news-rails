@@ -1,9 +1,8 @@
-require 'articles_helper'
+include ArticlesHelper
 
 class ArticlesController < ApplicationController
   # GET /articles
   def index
-    articles_helper = ArticlesHelper.new
-    render json: articles_helper.all_articles
+    render json: all_articles
   end
 end

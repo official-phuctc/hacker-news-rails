@@ -2,10 +2,10 @@ require 'net/http'
 require 'uri'
 require 'json'
 
-class ArticlesHelper
-  def initialize
+module ArticlesHelper
+  def client
     uri = 'https://iwa-test.herokuapp.com/graphql'
-    @client = Graphlient::Client.new(uri,
+    Graphlient::Client.new(uri,
       http_options: {
         read_timeout: 20,
         write_timeout: 30
@@ -13,8 +13,8 @@ class ArticlesHelper
     )
   end
 
-  def all_articles
-    @client.query <<~GRAPHQL
+  def self.all_articles
+    client.query <<~GRAPHQL
       query {
         articles {
           content
