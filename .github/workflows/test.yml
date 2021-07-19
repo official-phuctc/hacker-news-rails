@@ -50,6 +50,7 @@ jobs:
         PGUSER: postgres
         PGPASSWORD: postgres
         RAILS_ENV: test
+        GRAPHQL_URL: https://iwa-test.herokuapp.com/graphql
       run: |
         bundle exec rake test
         # bundle exec rake test:system
