@@ -4,7 +4,7 @@ require 'json'
 
 module ArticlesHelper
   def client
-    uri = 'https://iwa-test.herokuapp.com/graphql'
+    uri = ENV['GRAPHQL_URL']
     Graphlient::Client.new(uri,
       http_options: {
         read_timeout: 20,
